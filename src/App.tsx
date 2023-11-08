@@ -1,11 +1,19 @@
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import Bookmark from './pages/Bookmark'
+import Navbar from './components/Navbar'
 
 function App() {
 
   return (
     <>
-      <Home/>
+      <Router>
+        <Navbar/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/bookmark' element={<Bookmark/>} />
+        </Routes>
+      </Router>
     </>
   )
 }
