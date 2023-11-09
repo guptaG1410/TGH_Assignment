@@ -1,27 +1,83 @@
-# React + TypeScript + Vite
+# Quote Generator App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This React front-end project is a quote generator app that interacts with the [Quotable API](https://api.quotable.io) to display random quotes and allows users to bookmark their favourite quotes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Loads a random quote on the homepage using the `/random` endpoint.
+- Button to generate another random quote.
+- Displays a list of tags in a dropdown by calling the `/tags` endpoint.
+- When a tag is selected, fetches a random quote using the selected tag from the `/random` endpoint.
+- Allows users to bookmark quotes for later viewing.
+- Global state management using Redux.
+- Mobile-responsive design.
+- Optionally includes loading indicators during API calls.
+- Optionally includes the ability to remove quotes from the favourites section.
+- Optionally persists bookmarked quotes using `localstorage`.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Project Structure
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```plaintext
+/src
+|-- components
+|   |-- Navbar.tsx
+|   |-- Quotes.tsx
+|   |-- Tags.tsx
+|-- pages
+|   |-- Bookmark.tsx
+|   |-- Home.tsx
+|-- store
+|   |-- slices
+|   |   |-- bookmarkSlice.tsx
+|   |   |-- quoteSlice.tsx
+|   |   |-- tagSlice.tsx
+|   |-- store.tsx
+|-- App.tsx
+|-- index.css
+|-- main.tsx
+|-- README.md
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+```
+
+2. Navigate to the project directory:
+
+```bash
+cd quote-generator
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+4. Run the app:
+
+```bash
+npm start
+```
+
+5. Open http://localhost:3000 in your browser.
+
+## Usage
+
+- On the homepage, a random quote is loaded automatically.
+- Click the "Generate Quote" button to get another random quote.
+- Use the dropdown to select a tag and get a quote based on that tag.
+- Bookmark your favorite quotes by clicking the bookmark icon.
+- View bookmarked quotes on the /bookmarks page.
+- Optionally remove quotes from the bookmarks section.
+- Optionally persist bookmarked quotes using localstorage.
+
+
+
+
+
+
