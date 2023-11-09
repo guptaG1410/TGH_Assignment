@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar";
 function App() {
 
   return (
-    <div className="bg-mainBg min-h-[100vh]">
+    <div className="bg-mainBg min-h-[100vh] bg-slate-500">
       <Provider store={store}>
         <Router>
           <Navbar />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { BsFillBookmarkPlusFill } from 'react-icons/bs';
+import { LuBookMarked } from 'react-icons/lu';
 import { useDispatch, useSelector } from 'react-redux';
 import { add } from '../store/slices/bookmarkSlice.js';
 import { fetchQuotes, Status } from '../store/slices/quoteSlice.js';
@@ -34,7 +34,7 @@ const Quotes = () => {
 
   return (
     <>
-      <section className="bg-[#4b2bac] md:mt-10 mt-5 py-7 mx-auto relative rounded-xl md:w-[750px] w-[350px] min-h-[300px] h-auto text-white">
+      <section className="bg-gray-900 md:mt-10 mt-5 py-7 mx-auto relative rounded-xl md:w-[750px] w-[350px] min-h-[300px] h-auto text-white">
         <div className="flex items-center justify-center flex-col px-7">
           <h1 className="md:text-[1.9rem] text-[1.5rem] text-left min-h-[120px] h-auto">
             {quotes.content}
@@ -44,7 +44,7 @@ const Quotes = () => {
             <p className="text-[22px] font-[700] leading-[38px] tracking-[1px]">
               -{quotes.author}
             </p>
-            <BsFillBookmarkPlusFill
+            <LuBookMarked
               onClick={() => handleAdd(quotes)}
               className="text-2xl cursor-pointer active:animate-ping"
             />

@@ -1,5 +1,5 @@
 import { quotesData } from "../components/Quotes";
-import { MdDeleteForever } from "react-icons/md";
+import { AiTwotoneDelete } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { remove } from "../store/slices/bookmarkSlice";
 import React from "react";
@@ -29,7 +29,7 @@ const Bookmark = () => {
       {quotes.map((quote: quotesData) => (
         <section
           key={quote._id}
-          className="bg-[#D05252] mt-10  pt-7 md:w-[750px] w-[350px] pb-7 mx-auto relative rounded-xl min-h-[300px] h-auto text-white"
+          className="bg-gray-900 mt-10  pt-7 md:w-[750px] w-[350px] pb-7 mx-auto relative rounded-xl min-h-[300px] h-auto text-white"
         >
           <div className="flex mx-auto items-center justify-center flex-col px-7">
             <h1 className="md:text-[1.9rem] text-[1.5rem] text-left min-h-[120px] h-auto">
@@ -40,7 +40,7 @@ const Bookmark = () => {
               <p className="text-[22px] font-[700] leading-[38px] tracking-[1px]">
                 -{quote.author}
               </p>
-              <MdDeleteForever
+              <AiTwotoneDelete
                 onClick={() => handleRemove(quote._id)}
                 className="text-2xl cursor-pointer active:animate-bounce"
               />

@@ -24,7 +24,7 @@ const Home = () => {
         <Tags />
         <button
           onClick={getQuotes}
-          className="bg-[#009C51] shadow-shadowCustom mt-16 px-9 py-2 text-white text-3xl rounded-2xl"
+          className="bg-[#248d5a] shadow-shadowCustom mt-16 px-9 py-2 text-white text-3xl rounded-2xl"
         >
           Next Quote
         </button>
