@@ -2,7 +2,7 @@
 
 ## Overview
 
-This React front-end project is a quote generator app that interacts with the [Quotable API](https://api.quotable.io) to display random quotes and allows users to bookmark their favourite quotes.
+This front-end project is a quote generator app that interacts with the [Quotable API](https://api.quotable.io) to display random quotes and allows users to bookmark their favourite quotes.
 
 ## Features
 
